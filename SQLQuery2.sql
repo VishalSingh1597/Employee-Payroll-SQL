@@ -63,3 +63,18 @@ Select * from employee_payroll;
 ------Extending employee_payroll table-------
 
 ALTER TABLE employee_payroll ADD Basic_Pay varchar(10), Deduction FLOAT(20), Taxable_Pay FLOAT(20), Income_Tax Float(20), Net_Pay float(20);
+
+----------UC10-----------------
+UPDATE employee_payroll SET Phone_Number='9178933440',Emp_DEPT=DEFAULT;
+UPDATE employee_payroll SET Emp_Address = 'Mumbai', Emp_DEPT='Developer', Phone_Number='9874778679', Basic_Pay=12000,Deduction=5000,Taxable_Pay=2300,Income_Tax = 2564,Net_Pay=18000 WHERE EMPName='VISHAL';
+UPDATE employee_payroll SET Emp_Address = 'Mysore', Emp_DEPT='Developer', Phone_Number='9475175570', Basic_Pay=12000,Deduction=5000,Taxable_Pay=2300,Income_Tax = 2564,Net_Pay=10000 WHERE EMPName='OMPRAKASH';
+UPDATE employee_payroll SET Emp_Address = 'Mangalore', Emp_DEPT='PL', Phone_Number='9874227670', Basic_Pay=22000,Deduction=16000,Taxable_Pay=5300,Income_Tax = 5564,Net_Pay=22000 WHERE EMPName='HIMANSHU';
+UPDATE employee_payroll SET Emp_Address = 'Mumbai', Emp_DEPT='Accountant', Phone_Number='9874834556', Basic_Pay=13000,Deduction=5450,Taxable_Pay=2500,Income_Tax = 2564,Net_Pay=10000 WHERE EMPName='EKTA';
+UPDATE employee_payroll SET Emp_Address = 'Noida', Emp_DEPT='HR', Phone_Number='9930315660', Basic_Pay=14000,Deduction=5660,Taxable_Pay=2700,Income_Tax = 3564,Net_Pay=11000 WHERE EMPName='ANKITA';
+UPDATE employee_payroll SET Emp_Address = DEFAULT, Emp_DEPT='Engineer', Phone_Number='9167690926', Basic_Pay=16000,Deduction=5660,Taxable_Pay=2800,Income_Tax = 5564,Net_Pay=14000 WHERE EMPName='ABHISHEK';
+
+----------------------
+INSERT INTO employee_payroll VALUES('Terissa','48548','2020-01-20','F','Kashmir','8758989541','Sales','54767',4875,4555,54767,376734);
+INSERT INTO employee_payroll VALUES('Terissa','48548','2020-12-12','F','Kashmir','8758989345','Marketing','54767',4875,4555,54767,376734);
+
+select * from employee_payroll where EMPName='Terissa';
